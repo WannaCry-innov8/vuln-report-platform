@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sign Up</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="theme-toggle">
+    <button type="button" id="themeSwitch">Switch Theme</button>
+  </div>
+  <div class="container">
+    <img src="C:\Users\raphb\Desktop\WannaCry work\Secure Incident reporting\images\innov8 logo.png" alt="Logo" class="logo" />
+
+    <form id="signupForm" class="form">
+      <h2>Sign Up</h2>
+
+      <label for="signupName">Full Name</label>
+      <input type="text" id="signupName" placeholder="Full Name" required />
+
+      <label for="signupEmail">Email</label>
+      <input type="email" id="signupEmail" placeholder="Email" required autocomplete="email" />
+
+      <label for="signupPassword">Password</label>
+      <div class="password-field">
+        <input type="password" id="signupPassword" placeholder="Password" required autocomplete="new-password" />
+        <button type="button" id="toggleSignupPassword">Show</button>
+      </div>
+
+      <label for="confirmPassword">Confirm Password</label>
+      <div class="password-field">
+        <input type="password" id="confirmPassword" placeholder="Confirm Password" required autocomplete="new-password" />
+        <button type="button" id="toggleConfirmPassword">Show</button>
+      </div>
+
+      <div class="options">
+        <label><input type="checkbox" id="agreeTerms" required /> I agree to the terms and conditions</label>
+      </div>
+
+      <button type="submit">Create Account</button>
+    </form>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

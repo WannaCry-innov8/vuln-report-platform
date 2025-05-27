@@ -56,3 +56,33 @@ document.getElementById('forgotPassword').addEventListener('click', function (e)
     alert("Invalid email format.");
   }
 });
+
+// Password visibility toggles
+document.getElementById("toggleSignupPassword")?.addEventListener("click", function () {
+  const pass = document.getElementById("signupPassword");
+  this.textContent = pass.type === "password" ? "Hide" : "Show";
+  pass.type = pass.type === "password" ? "text" : "password";
+});
+
+document.getElementById("toggleConfirmPassword")?.addEventListener("click", function () {
+  const pass = document.getElementById("confirmPassword");
+  this.textContent = pass.type === "password" ? "Hide" : "Show";
+  pass.type = pass.type === "password" ? "text" : "password";
+
+
+  document.getElementById('toggleSignupPassword').addEventListener('click', function () {
+  const pass = document.getElementById("signPassword");
+  const currentType = passwordInput.getAttribute('type');
+  if (currentType === 'password') {
+    pass.setAttribute('type', 'text');
+    this.textContent = 'Hide';
+  } else {
+    pass.setAttribute('type', 'password');
+    this.textContent = 'Show';
+  }
+
+  // Keep focus and cursor at the end
+  pass.focus();
+  const length = pass.value.length;
+  pass.setSelectionRange(length, length);
+});
