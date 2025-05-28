@@ -1,0 +1,123 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f4f6f8;
+  }
+  
+  .container {
+    display: flex;
+    min-height: 100vh;
+  }
+  
+  .sidebar {
+    width: 220px;
+    background-color: #1e293b;
+    color: #fff;
+    padding: 20px;
+  }
+  
+  .sidebar h2 {
+    font-size: 18px;
+    margin-bottom: 20px;
+  }
+  
+  .sidebar nav a {
+    display: block;
+    color: #cbd5e1;
+    padding: 10px;
+    text-decoration: none;
+    margin-bottom: 10px;
+    border-radius: 4px;
+  }
+  
+  .sidebar nav a.active,
+  .sidebar nav a:hover {
+    background-color: #334155;
+    color: #fff;
+  }
+  
+  .main-content {
+    flex-grow: 1;
+    padding: 20px;
+  }
+  
+  .dashboard-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .summary-cards {
+    display: flex;
+    gap: 15px;
+    margin: 20px 0;
+  }
+  
+  .card {
+    background-color: #fff;
+    border-radius: 6px;
+    padding: 15px;
+    flex: 1;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  .card.red {
+    border-left: 6px solid #ef4444;
+  }
+  
+  .card.yellow {
+    border-left: 6px solid #facc15;
+  }
+  
+  .card.green {
+    border-left: 6px solid #10b981;
+  }
+  
+  .threat-feed ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .threat-feed li {
+    padding: 10px;
+    background: #fff;
+    margin-bottom: 8px;
+    border-left: 4px solid #3b82f6;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+  }
+  
+  .threat-feed li strong {
+    display: block;
+    margin-bottom: 4px;
+  }
+  
+  .incident-chart .chart-placeholder {
+    margin-top: 20px;
+  }
+  
+  .chart-bars {
+    height: 200px;
+    display: flex;
+    align-items: flex-end;
+    gap: 10px;
+  }
+  
+  .bar {
+    display: inline-block;
+    width: 30px;
+    background-color: steelblue;
+    vertical-align: bottom;
+  }
+  
+  .chart-labels {
+    display: flex;
+    justify-content: space-between;
+    width: 190px;
+    margin-top: 5px;
+  }
+  
+  .bar-label {
+    text-align: center;
+    font-size: 0.8em;
+  }
+  
