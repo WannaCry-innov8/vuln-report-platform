@@ -2,7 +2,8 @@ from django.db import models
 
 # Create your models here.
 
-# Registering a USER    
+# Registering a USER   
+ 
 class Institutions(models.Model):
     Institution_id = models.AutoField(primary_key=True)
     Name = models.CharField(max_length=255)
@@ -39,3 +40,22 @@ class BasicInformation(models.Model):
     Department = models.CharField(max_length=25)    # Reporting officer's department
     ContactNumber = models.IntegerField()   # Reporting officer's contact number
     Email = models.EmailField()     # Reporting officer's email
+
+class IncidentInformation(models.Model):
+    DateTime = models.DateTimeField(auto_now_add=True)
+    Location = models.CharField(255)
+    Severity = models.CharField(5)
+    DiscMethod = models.CharField(255)
+    IncidentType = models.CharField(255)
+    IncidentDesc = models.CharField(255)
+    AffectedResc = models.CharField(255)
+    FinLoss = models.IntegerField()
+    DataBreach = models.BooleanField()
+    
+class ImpactAssessment(models.Model):
+    ImpactDetails = models.CharField(255)
+
+class IncidentRecovery(models.Model):
+    Duration = models.DurationField()
+    
+
